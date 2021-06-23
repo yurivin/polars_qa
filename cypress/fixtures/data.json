@@ -1,0 +1,11 @@
+{
+    "supplyDOT_50000": "50000",
+    "gasFeeSupplyDOT": "7.87 MNT",
+    "borrowDOT_36000": "36000",
+    "selectorEnablCollateral": "//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/button",
+    "selectorBorrowBtn": "//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/button",
+    "collateralDisabled": "Disabled",
+    "collateralEnabled": "Enable"
+
+
+}
