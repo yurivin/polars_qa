@@ -11,121 +11,177 @@ const provider = new WsProvider("ws://127.0.0.1:9944");
 
 const config  = {
     CUSTOM_TYPES: {
-    Address: 'MultiAddress',
-        TokenSymbol: {
-        _enum: {
-            MNT: 0,
-                DOT: 1,
-                MDOT: 2,
-                KSM: 3,
-                MKSM: 4,
-                BTC: 5,
-                MBTC: 6,
-                ETH: 7,
-                METH: 8,
-        },
-    },
-    CurrencyType: {
-        _enum: ['Native', 'UnderlyingAsset', 'WrappedToken'],
-    },
-    CurrencyId: {
-        _enum: {
-            Native: 'TokenSymbol',
-                UnderlyingAsset: 'TokenSymbol',
-                WrappedToken: 'TokenSymbol',
-        },
-    },
-    Operation: {
-        _enum: ['Deposit', 'Redeem', 'Borrow', 'Repay', 'Transfer'],
-    },
-    Pool: {
-        total_borrowed: 'Balance',
-            borrow_index: 'Rate',
-            total_protocol_interest: 'Balance',
-    },
-    LiquidationPoolData: {
-        deviation_threshold: 'Rate',
-            balance_ratio: 'Rate',
-            max_ideal_balance: 'Option<Balance>',
-    },
-    PoolUserData: {
-        total_borrowed: 'Balance',
-            interest_index: 'Rate',
-            is_collateral: 'bool',
-            liquidation_attempts: 'u8',
-    },
-    RiskManagerData: {
-        max_attempts: 'u8',
-            min_partial_liquidation_sum: 'Balance',
-            threshold: 'Rate',
-            liquidation_fee: 'Rate',
-    },
-    CurrencyIdOf: 'CurrencyId',
-        Amount: 'i128',
-        AmountOf: 'Amount',
-        Rate: 'FixedU128',
-        Price: 'FixedU128',
-        ControllerData: {
-        last_interest_accrued_block: 'BlockNumber',
-            protocol_interest_factor: 'Rate',
-            max_borrow_rate: 'Rate',
-            collateral_factor: 'Rate',
-            borrow_cap: 'Option<Balance>',
-            protocol_interest_threshold: 'Balance',
-    },
-    PauseKeeper: {
-        deposit_paused: 'bool',
-            redeem_paused: 'bool',
-            borrow_paused: 'bool',
-            repay_paused: 'bool',
-            transfer_paused: 'bool',
-    },
-    MinterestModelData: {
-        kink: 'Rate',
-            base_rate_per_block: 'Rate',
-            multiplier_per_block: 'Rate',
-            jump_multiplier_per_block: 'Rate',
-    },
-    PoolState: {
-        exchange_rate: 'Rate',
-            borrow_rate: 'Rate',
-            supply_rate: 'Rate',
-    },
-    UserPoolBalanceData: {
-        total_supply: 'Balance',
-            total_borrowed: 'Balance',
-    },
-    MntState: {
-        mnt_distribution_index: 'Rate',
-            index_updated_at_block: 'BlockNumber',
-    },
-    MntPoolState: {
-        supply_state: 'MntState',
-            borrow_state: 'MntState',
-    },
-    MntBalanceInfo: {
-        amount: 'Balance',
-    },
-    HypotheticalLiquidityData: {
-        liquidity: 'Amount',
-    },
-    BalanceInfo: {
-        amount: 'Balance',
-    },
-    OracleKey: 'CurrencyId',
-        OracleValue: 'Price',
-        DataProviderId: {
-        _enum: ['Aggregated', 'Minterest'],
-    },
-    TimestampedValue: {
-        value: 'OracleValue',
-            timestamp: 'Moment',
-    },
-    TimeStampedPrice: {
-        value: 'OracleValue',
-            timestamp: 'Moment',
-    },
-    TimestampedValueOf: 'TimestampedValue',
+			"Address": "MultiAddress",
+			"TokenSymbol": {
+				"_enum": {
+					"MNT": 0,
+					"DOT": 1,
+					"MDOT": 2,
+					"KSM": 3,
+					"MKSM": 4,
+					"BTC": 5,
+					"MBTC": 6,
+					"ETH": 7,
+					"METH": 8
+				}
+			},
+			"CurrencyType": {
+				"_enum": [
+					"Native",
+					"UnderlyingAsset",
+					"WrappedToken"
+				]
+			},
+			"CurrencyId": {
+				"_enum": {
+					"Native": "TokenSymbol",
+					"UnderlyingAsset": "TokenSymbol",
+					"WrappedToken": "TokenSymbol"
+				}
+			},
+			"Operation": {
+				"_enum": [
+					"Deposit",
+					"Redeem",
+					"Borrow",
+					"Repay",
+					"Transfer"
+				]
+			},
+			"PoolInitData": {
+				"kink": "Rate",
+				"base_rate_per_block": "Rate",
+				"multiplier_per_block": "Rate",
+				"jump_multiplier_per_block": "Rate",
+				"protocol_interest_factor": "Rate",
+				"max_borrow_rate": "Rate",
+				"collateral_factor": "Rate",
+				"protocol_interest_threshold": "Balance",
+				"deviation_threshold": "Rate",
+				"balance_ratio": "Rate",
+				"max_attempts": "u8",
+				"min_partial_liquidation_sum": "Balance",
+				"threshold": "Rate",
+				"liquidation_fee": "Rate"
+			},
+			"Pool": {
+				"total_borrowed": "Balance",
+				"borrow_index": "Rate",
+				"total_protocol_interest": "Balance"
+			},
+			"LiquidationPoolData": {
+				"deviation_threshold": "Rate",
+				"balance_ratio": "Rate",
+				"max_ideal_balance": "Option<Balance>"
+			},
+			"PoolUserData": {
+				"total_borrowed": "Balance",
+				"interest_index": "Rate",
+				"is_collateral": "bool",
+				"liquidation_attempts": "u8"
+			},
+			"RiskManagerData": {
+				"max_attempts": "u8",
+				"min_partial_liquidation_sum": "Balance",
+				"threshold": "Rate",
+				"liquidation_fee": "Rate"
+			},
+			"CurrencyIdOf": "CurrencyId",
+			"Amount": "i128",
+			"AmountOf": "Amount",
+			"Rate": "FixedU128",
+			"Price": "FixedU128",
+			"ControllerData": {
+				"last_interest_accrued_block": "BlockNumber",
+				"protocol_interest_factor": "Rate",
+				"max_borrow_rate": "Rate",
+				"collateral_factor": "Rate",
+				"borrow_cap": "Option<Balance>",
+				"protocol_interest_threshold": "Balance"
+			},
+			"PauseKeeper": {
+				"deposit_paused": "bool",
+				"redeem_paused": "bool",
+				"borrow_paused": "bool",
+				"repay_paused": "bool",
+				"transfer_paused": "bool"
+			},
+			"MinterestModelData": {
+				"kink": "Rate",
+				"base_rate_per_block": "Rate",
+				"multiplier_per_block": "Rate",
+				"jump_multiplier_per_block": "Rate"
+			},
+			"PoolState": {
+				"exchange_rate": "Rate",
+				"borrow_rate": "Rate",
+				"supply_rate": "Rate"
+			},
+			"UserPoolBalanceData": {
+				"total_supply": "Balance",
+				"total_borrowed": "Balance"
+			},
+			"MntState": {
+				"mnt_distribution_index": "Rate",
+				"index_updated_at_block": "BlockNumber"
+			},
+			"MntPoolState": {
+				"supply_state": "MntState",
+				"borrow_state": "MntState"
+			},
+			"HypotheticalLiquidityData": {
+				"liquidity": "Amount"
+			},
+			"BalanceInfo": {
+				"amount": "Balance"
+			},
+			"MntBalanceInfo": {
+				"amount": "Balance"
+			},
+			"OracleKey": "CurrencyId",
+			"OracleValue": "Price",
+			"DataProviderId": {
+				"_enum": [
+					"Aggregated",
+					"Minterest"
+				]
+			},
+			"TimestampedValue": {
+				"value": "OracleValue",
+				"timestamp": "Moment"
+			},
+			"TimestampedValueOf": "TimestampedValue",
+			"BalanceLock": {
+				"id": "LockIdentifier",
+				"amount": "Balance",
+				"reasons": "Reasons"
+			},
+			"VestingBucket": {
+				"_enum": [
+					"Community",
+					"PrivateSale",
+					"PublicSale",
+					"MarketMaking",
+					"StrategicPartners",
+					"Marketing",
+					"Ecosystem",
+					"Team"
+				]
+			},
+			"VestingSchedule": {
+				"bucket": "VestingBucket",
+				"start": "BlockNumber",
+				"period": "BlockNumber",
+				"periodCount": "u32",
+				"perPeriod": "Compact<Balance>"
+			},
+			"VestingScheduleOf": "VestingSchedule",
+			"AccountInfo": {
+				"nonce": "Index",
+				"consumers": "RefCount",
+				"providers": "RefCount",
+				"data": "AccountData"
+			}
 },
     RPC: {
         controller: {
@@ -222,8 +278,42 @@ const config  = {
                         isOptional: true,
                     },
                 ],
-                    type: 'Option<BalanceInfo>',
+                    type: 'BalanceInfo',
             },
+					getUserUnderlyingBalancePerAsset: {
+						description: "Returns user balance in the pool converted to underlying asset",
+						params: [
+							{
+								name: "account_id",
+								type: "AccountId"
+							},
+							{
+								name: "pool_id",
+								type: "CurrencyId"
+							},
+							{
+								name: "blockNumber",
+								type: "BlockNumber",
+								isOptional: true
+							}
+						],
+						type: "BalanceInfo"
+					},
+					utilizationRate: {
+						description: "Returns utilization rate based on pool parameters calculated for current block",
+						params: [
+							{
+								name: "pool_id",
+								type: "CurrencyId"
+							},
+							{
+								name: "blockNumber",
+								type: "BlockNumber",
+								isOptional: true
+							}
+						],
+						type: "Option<Rate>"
+					}
         },
         prices: {
             getAllLockedPrices: {

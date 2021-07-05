@@ -6,9 +6,11 @@
     "env": {
         "url": "http://127.0.0.1:8000",
         "collateralFactor": "0.9",
-        "priceDOT": "2"
+        "price": "2",
+        "accountEve": "5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw",
+        "underlingTokenKSM": "KSM"
     },
-    "projectId": "k8w8en",
+    "projectId": "uzxzfo",
     "integrationFolder": "cypress/integration",
     "viewportWidth": 1400,
     "viewportHeight": 800,

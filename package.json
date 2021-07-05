@@ -4,14 +4,16 @@
     "main": "index.js",
     "scripts": {
         "cy:open": "cypress open",
-        "smokeMinterest": "cypress run --browser chrome --spec \\\"cypress/integration/specs/mininterestSmoke/*\\\" --headless --reporter mochawesome"
+        "smokeMinterest": "cypress run --browser chrome --spec \"cypress/integration/specs/mininterestSmoke/*\" --record --key dea2fa83-3316-4c25-a1c5-efd5f28514ee --headless --reporter mochawesome"
     },
     "author": "Marina Kulsha",
     "license": "ISC",
     "dependencies": {
         "@babel/preset-env": "^7.14.4",
         "@polkadot/api": "^3.11.1",
+        "@polkadot/extension-dapp": "^0.38.7",
         "@polkadot/types": "^3.11.1",
+        "@polkadot/ui-keyring": "^0.82.1",
         "@polkadot/util": "^5.9.2",
         "@types/qs": "^6.9.5",
         "babel-plugin-add-module-exports": "^1.0.4",
@@ -35,6 +37,7 @@
     "devDependencies": {
         "cypress": "^7.6.0",
         "cypress-file-upload": "^4.1.1",
+        "cypress-promise": "^1.1.0",
         "mocha": "^8.2.1",
         "mochawesome": "^4.1.0"
     },
