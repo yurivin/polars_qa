@@ -33,7 +33,7 @@
         "xml-js": "^1.6.11"
     },
     "devDependencies": {
-        "cypress": "^7.5.0",
+        "cypress": "^7.6.0",
         "cypress-file-upload": "^4.1.1",
         "mocha": "^8.2.1",
         "mochawesome": "^4.1.0"
