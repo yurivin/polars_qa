@@ -17,3 +17,15 @@ import './commands';
 import 'cypress-file-upload';
 import 'cypress-xpath';
 import 'cypress-promise/register'
+import 'cypress-metamask'
+import { configure } from '@testing-library/cypress';
+
+configure({ testIdAttribute: 'data-testid' });
+
+Cypress.on('window:before:load', win => {
+	cy.stub(win.console, 'error').callsFake(message => {
+		cy.now('task', 'error', message);
+		// fail test on browser console error
+		// throw new Error(message);
+	});
+});

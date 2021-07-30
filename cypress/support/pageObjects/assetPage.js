@@ -1,5 +1,5 @@
-import ApiService from './api_service';
-import { formatData } from './supportFunctions';
+// import ApiService from './api_service';
+import Web3 from 'web3';
 
 class AssetPage {
 

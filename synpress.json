@@ -1,0 +1,21 @@
+{
+  "baseUrl": "https://qa.polars.io/",
+  "userAgent": "synpress",
+  "retries": { "runMode": 0, "openMode": 0 },
+  "defaultCommandTimeout": 100000,
+  "pageLoadTimeout": 80000,
+  "requestTimeout": 80000,
+  "integrationFolder": "cypress/integration",
+  "screenshotsFolder": "/screenshots",
+  "videosFolder": "cypress/videos",
+  "chromeWebSecurity": true,
+  "viewportWidth": 1400,
+  "viewportHeight": 800,
+  "component": {
+    "componentFolder": ".",
+    "testFiles": "**/*spec.{js,jsx,ts,tsx}"
+  },
+  "env": {
+    "coverage": false
+  }
+}

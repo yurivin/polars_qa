@@ -1,14 +1,10 @@
 {
-    "defaultCommandTimeout": 100000,
-    "pageLoadTimeout": 80000,
-    "requestTimeout": 80000,
+    "defaultCommandTimeout": 90000,
+    "pageLoadTimeout": 90000,
+    "requestTimeout": 90000,
     "reporter": "mochawesome",
     "env": {
-        "url": "http://127.0.0.1:8000",
-        "collateralFactor": "0.9",
-        "price": "2",
-        "accountEve": "5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw",
-        "underlingTokenKSM": "KSM"
+        "url": "https://app.polars.io/"
     },
     "projectId": "uzxzfo",
     "integrationFolder": "cypress/integration",

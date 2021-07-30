@@ -1,12 +1,12 @@
 {
-    "name": "cypress_mininterest",
+    "name": "cypress_polars",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "cy:open": "cypress open",
-        "smokeMinterest": "cypress run --browser chrome --spec \"cypress/integration/specs/mininterestSmoke/*\" --record --key dea2fa83-3316-4c25-a1c5-efd5f28514ee --headless --reporter mochawesome"
+        "cy:open": "CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open",
+        "smokePolars": "cypress run --browser chrome --spec \\\"cypress/integration/specs/polars/*\\\" --headless --reporter mochawesome"
     },
-    "author": "Marina Kulsha",
+    "author": "",
     "license": "ISC",
     "dependencies": {
         "@babel/preset-env": "^7.14.4",
@@ -15,6 +15,7 @@
         "@polkadot/types": "^3.11.1",
         "@polkadot/ui-keyring": "^0.82.1",
         "@polkadot/util": "^5.9.2",
+        "@synthetixio/synpress": "^0.9.5",
         "@types/qs": "^6.9.5",
         "babel-plugin-add-module-exports": "^1.0.4",
         "babel-plugin-root-import": "^6.6.0",
@@ -31,12 +32,14 @@
         "twilio": "^3.54.2",
         "twilio-client": "^1.13.0",
         "utf8": "^3.0.0",
+        "web3": "^1.4.0",
         "word-extractor": "^0.3.0",
         "xml-js": "^1.6.11"
     },
     "devDependencies": {
-        "cypress": "^7.6.0",
+        "cypress": "^8.1.0",
         "cypress-file-upload": "^4.1.1",
+        "cypress-metamask": "^1.0.5-development",
         "cypress-promise": "^1.1.0",
         "mocha": "^8.2.1",
         "mochawesome": "^4.1.0"
