@@ -1,0 +1,194 @@
+{
+  "projects": {
+    "qa": {
+      "baseUrl": "https://qa.polars.io/",
+      "adminUrl": "https://qa.polars.io/admin",
+      "params": {
+        "mmSecretKey": "fever hole cloth road bus possible march foot civil scale long luxury",
+        "password": "Thunder23!",
+        "adminLogin": "Creature",
+        "adminPassword": "DeV1LoRg0d?",
+        "platforms": {
+          "pol": "Mixed-POL",
+          "usdt": "Mixed-pUSDT"
+        }
+      }
+    },
+    "bsc-test": {
+      "baseUrl": "https://bsc-test.polars.io/",
+      "adminUrl": "https://bsc-test.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "bsc": {
+      "baseUrl": "https://bsc.polars.io/",
+      "adminUrl": "https://bsc.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "eth-test": {
+      "baseUrl": "https://eth-test.polars.io/",
+      "adminUrl": "https://eth-test.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "eth": {
+      "baseUrl": "https://eth.polars.io/",
+      "adminUrl": "https://eth.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "heko-test": {
+      "baseUrl": "https://heko-test.polars.io/",
+      "adminUrl": "https://heko-test.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "heko": {
+      "baseUrl": "https://heko.polars.io/",
+      "adminUrl": "https://heko.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "app": {
+      "baseUrl": "https://app.polars.io/",
+      "adminUrl": "https://app.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "polygon-test": {
+      "baseUrl": "https://polygon-test.polars.io/",
+      "adminUrl": "https://polygon-test.polars.io/admin",
+      "params": {
+        "platforms": {
+          "pol": "Mixed-POL",
+          "usdt": "Mixed-pUSDT"
+        }
+      }
+    },
+    "polygon": {
+      "baseUrl": "https://polygon.polars.io/",
+      "adminUrl": "https://polygon.polars.io/admin",
+      "params": {
+        "platforms": {
+          "pol": "Mixed-POL",
+          "usdt": "Mixed-USDC"
+        }
+      }
+    },
+    "internal": {
+      "baseUrl": "https://internal.polars.io/",
+      "adminUrl": "https://internal.polars.io/admin",
+      "params": {
+
+      }
+    },
+    "design": {
+      "baseUrl": "https://design.polars.io/",
+      "adminUrl": "https://design.polars.io/admin",
+      "params": {
+
+      }
+    }
+  },
+  "networks": {
+    "bscTest": {
+      "name": "BSC Testnet",
+      "rpc": {
+        "first": "https://data-seed-prebsc-1-s1.binance.org:8545/",
+        "second": "https://data-seed-prebsc-2-s1.binance.org:8545/",
+        "third": "https://data-seed-prebsc-1-s2.binance.org:8545/",
+        "fourth": "https://data-seed-prebsc-2-s2.binance.org:8545/",
+        "fifth": "https://data-seed-prebsc-1-s3.binance.org:8545/",
+        "sixth": "https://data-seed-prebsc-2-s3.binance.org:8545/"
+      },
+      "chainId": "97",
+      "symbol": "BNB",
+      "blockExplorer": "https://testnet.bscscan.com/"
+    },
+    "bscMain": {
+      "name": "BSC Mainnet",
+      "rpc": {
+        "first": "https://bsc-dataseed.binance.org/"
+      },
+      "chainId": "56",
+      "symbol": "BNB",
+      "blockExplorer": "https://bscscan.com"
+    },
+    "hekoTest": {
+      "name": "Heko Testnet",
+      "rpc": {
+        "first": "https://http-testnet.hecochain.com/"
+      },
+      "chainId": "256",
+      "symbol": "HT",
+      "blockExplorer": "https://testnet.hecoinfo.com/"
+    },
+    "hekoMain": {
+      "name": "Heko Mainnet",
+      "rpc": {
+        "first": "https://http-mainnet.hecochain.com/"
+      },
+      "chainId": "128",
+      "symbol": "HT",
+      "blockExplorer": "https://hecoinfo.com"
+    },
+    "polygonTest": {
+      "name": "Mumbai",
+      "rpc": {
+        "first": "https://matic-mumbai.chainstacklabs.com"
+      },
+      "chainId": "80001",
+      "symbol": "MATIC",
+      "blockExplorer": "https://mumbai.polygonscan.com"
+    },
+    "polygonMain": {
+      "name": "Polygon Mainnet",
+      "rpc": {
+        "first": "https://polygon.llamarpc.com"
+      },
+      "chainId": "137",
+      "symbol": "MATIC",
+      "blockExplorer": "https://polygonscan.com"
+    }
+  },
+  "networkSetupFields": {
+    "name": "Network Name",
+    "rpc": "New RPC URL",
+    "id": "Chain ID",
+    "symbol": "Currency Symbol",
+    "explorer": "Block Explorer URL"
+  },
+  "api_event_data": {
+    "eventTime": "10:12 PM - 11:12 PM",
+    "eventDate": "11 April",
+    "eventType": "type",
+    "eventName": "name",
+    "whiteTeam": "white",
+    "blackTeam": "black",
+    "priceChange": "5",
+    "eventLink": ""
+  },
+
+  "crypto_event_data": {
+    "eventName": "",
+    "whiteTeam": "",
+    "blackTeam": "",
+    "priceChange": "",
+    "eventTime": "",
+    "eventDate": "",
+    "eventLink": ""
+  },
+
+  "machine": {
+    "linux": "linux",
+    "mac": "mac"
+  }
+}

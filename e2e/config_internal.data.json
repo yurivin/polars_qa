@@ -1,0 +1,36 @@
+{
+  "projects": {
+    "baseUrl": "https://internal.polars.io/",
+    "adminUrl": "https://internal.polars.io/admin",
+    "params": {
+      "mmSecretKey": "fever hole cloth road bus possible march foot civil scale long luxury",
+      "password": "Thunder23!",
+      "adminLogin": "Creature",
+      "adminPassword": "DeV1LoRg0d?",
+      "pol": "Mixed-POL",
+      "usdt": "Mixed-pUSDT"
+    }
+  },
+  "networks": {
+      "name": "Mumbai",
+      "rpc": {
+        "first": "https://matic-mumbai.chainstacklabs.com"
+      },
+      "chainId": "80001",
+      "symbol": "MATIC",
+      "blockExplorer": "https://mumbai.polygonscan.com"
+  },
+
+  "networkSetupFields": {
+    "name": "Network Name",
+    "rpc": "New RPC URL",
+    "id": "Chain ID",
+    "symbol": "Currency Symbol",
+    "explorer": "Block Explorer URL"
+  },
+
+  "machine": {
+    "linux": "linux",
+    "mac": "mac"
+  }
+}
