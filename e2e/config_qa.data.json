@@ -2,6 +2,7 @@
   "projects": {
     "baseUrl": "https://qa.polars.io/",
     "adminUrl": "https://qa.polars.io/admin",
+    "metamask": "chrome-extension://mpjiecdeagakfpaembbldgmncdegnjin/home.html",
     "params": {
       "mmSecretKey": "fever hole cloth road bus possible march foot civil scale long luxury",
       "password": "Thunder23!",

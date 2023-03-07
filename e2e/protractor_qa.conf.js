@@ -94,7 +94,8 @@ exports.config = {
         'browserName': 'chrome',
         'chromeOptions': {
             args: ['--disable-touch-touch-drag-drop', '--disable-infobars',
-                '--no-sandbox', '--test-type=browser', '--start-maximized', '--window-size=1440,900', '--load-extension=/Users/ihor/Documents/Polars_pro/nkbihfbeogaeaoehlefnkodbefgpgknn', '--app-id = pgalkbghmoeblklmkclojoifddobjcaj'],
+                '--no-sandbox', '--test-type=browser', '--start-maximized', '--window-size=1440,900',
+                '--load-extension=/Users/ihor/Documents/polars_qa/nkbihfbeogaeaoehlefnkodbefgpgknn', '--app-id = mpjiecdeagakfpaembbldgmncdegnjin'],
             prefs: {
                 'download': {
                     'prompt_for_download': false,

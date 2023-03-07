@@ -93,7 +93,7 @@ describe('Make prediction', function () {
             await console.log(":::::" + futureAdminStartTime);
             await console.log(":::::" + custom_event_data.date);
             await console.log(":::::" + custom_event_data.time);
-            await browser.get('chrome-extension://pgalkbghmoeblklmkclojoifddobjcaj/home.html');
+            await browser.get(config_data.projects.metamask);
             await commonHelper.switchToPreviousWithoutClose();
         });
 
@@ -1133,7 +1133,7 @@ describe('Make prediction', function () {
             await console.log(":::::" + futureAdminStartTime);
             await console.log(":::::" + custom_event_data.date);
             await console.log(":::::" + custom_event_data.time);
-            await browser.get('chrome-extension://pgalkbghmoeblklmkclojoifddobjcaj/home.html');
+            await browser.get(config_data.projects.metamask);
             await commonHelper.switchToPreviousWithoutClose();
         });
 
@@ -2071,7 +2071,7 @@ describe('Make prediction', function () {
             await console.log(":::::" + newStartTime);
             await console.log("::::" + newEndTime);
             await console.log(":::::" + futureAdminStartTime);
-            await browser.get('chrome-extension://pgalkbghmoeblklmkclojoifddobjcaj/home.html');
+            await browser.get(config_data.projects.metamask);
             await commonHelper.switchToPreviousWithoutClose();
         });
 

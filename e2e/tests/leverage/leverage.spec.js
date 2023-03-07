@@ -22,7 +22,7 @@ var networks = config_data.networks;
 var adminData = config_data.projects.params;
 var platforms = config_data.projects.params;
 
-fdescribe('Leverage', function () {
+describe('Leverage', function () {
 
     describe('user is able to add and remove liquidity', function () {
 
@@ -40,7 +40,8 @@ fdescribe('Leverage', function () {
 
         it('should open metamask page', async function () {
             await browser.get(config_data.projects.baseUrl);
-            await browser.get('chrome-extension://pgalkbghmoeblklmkclojoifddobjcaj/home.html');
+            await commonHelper.waitUntilElementVisible(homePage.btnAcceptCookie);
+            await browser.get(config_data.projects.metamask);
             await commonHelper.switchToPreviousWithoutClose();
         });
 
@@ -303,7 +304,7 @@ fdescribe('Leverage', function () {
             await console.log(":::::" + futureAdminStartTime);
             await console.log(":::::" + custom_event_data.date);
             await console.log(":::::" + custom_event_data.time);
-            await browser.get('chrome-extension://pgalkbghmoeblklmkclojoifddobjcaj/home.html');
+            await browser.get(config_data.projects.metamask);
             await commonHelper.switchToPreviousWithoutClose();
         });
 
@@ -912,7 +913,7 @@ fdescribe('Leverage', function () {
             await console.log(":::::" + futureAdminStartTime);
             await console.log(":::::" + custom_event_data.date);
             await console.log(":::::" + custom_event_data.time);
-            await browser.get('chrome-extension://pgalkbghmoeblklmkclojoifddobjcaj/home.html');
+            await browser.get(config_data.projects.metamask);
             await commonHelper.switchToPreviousWithoutClose();
         });
 
