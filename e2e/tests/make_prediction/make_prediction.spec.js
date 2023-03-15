@@ -563,7 +563,7 @@ describe('Make prediction', function () {
 
         it('should open platforms', async function () {
             await platformsPage.clickSwitchPlatform();
-            await platformsPage.selectPlatform('POL');
+            await platformsPage.selectPlatformCommon('POL');
         });
 
         it('should click on orders tab', async function () {

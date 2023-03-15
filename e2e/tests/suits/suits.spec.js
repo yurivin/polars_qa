@@ -1485,7 +1485,7 @@ describe('Suits', function () {
 
         it('should open platforms', async function () {
             await platformsPage.clickSwitchPlatform();
-            await platformsPage.selectPlatform('POL');
+            await platformsPage.selectPlatformSuits('POL');
         });
 
         it('should click leverage tab', async function() {

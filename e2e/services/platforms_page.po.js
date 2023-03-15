@@ -23,12 +23,29 @@ var PlatformsPage = function () {
         await this.switchPlatformBtn.click();
     };
 
-    this.selectPlatform = async function (value) {
+    this.selectPlatformSuits = async function (value) {
         let platform = element(by.xpath(`//*[@class='platform-card__header'][contains(.,'${value}')]//div[@class='small'][contains(.,'Activate')]`));
         await commonHelper.waitUntilElementVisible(platform);
         await platform.click();
         let activatedPlatform = element(by.xpath(`//*[@class='platform-card__header'][contains(.,'${value}')]//div[@class='small disabled'][contains(.,'Activated')]`));
         await commonHelper.waitUntilElementVisible(activatedPlatform);
+    };
+
+        this.selectPlatform = async function (value) {
+        let expand = $('.btn.small');
+        let platform = element(by.xpath(`//*[@class='platform-card__header'][contains(.,'${value}')]//div[@class='small'][contains(.,'Activate')]`));
+        await commonHelper.waitUntilElementVisible(expand);
+        await expand.click();
+        await commonHelper.waitUntilElementVisible(platform);
+        await platform.click();
+        let activatedPlatform = element(by.xpath(`//*[@class='platform-card__header'][contains(.,'${value}')]//div[@class='small disabled'][contains(.,'Activated')]`));
+        await commonHelper.waitUntilElementVisible(activatedPlatform);
+    };
+
+    this.selectPlatformCommon = async function (value) {
+        let platform = element(by.cssContainingText('.colleteral-currency', value));
+        await commonHelper.waitUntilElementVisible(platform);
+        await platform.click();
     };
 
     this.activateSuit = async function (name) {

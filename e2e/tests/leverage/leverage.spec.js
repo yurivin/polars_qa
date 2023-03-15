@@ -158,7 +158,7 @@ describe('Leverage', function () {
         it('should open platforms', async function () {
             await browser.get(qa.baseUrl);
             await platformsPage.clickSwitchPlatform();
-            await platformsPage.selectPlatform('POL');
+            await platformsPage.selectPlatformCommon('POL');
         });
 
         it('should click arrow and liquidity', async function () {
