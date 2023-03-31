@@ -22,7 +22,6 @@ var adminData = config_data.projects.params;
 var platforms = config_data.projects.params;
 
 describe('Make prediction', function () {
-
     describe('user is able to create custom event', function () {
 
         let master, modal;
@@ -1019,6 +1018,16 @@ describe('Make prediction', function () {
             await commonHelper.waitUntilElementVisible(homePage.successTransactionMsg);
         });
 
+        ///HISTORY
+
+        it('should switch another tab', async function () {
+            await makePredictionPage.switchOtherTab('My orders history');
+        });
+
+        it('should check status', async function () {
+            await makePredictionPage.getOrderStatus(custom_event_data.startTime, custom_event_data.date, 'Finished');
+        });
+
         it('should open platforms', async function () {
             await platformsPage.clickSwitchPlatform();
             await platformsPage.selectPlatform('POL');
@@ -1058,6 +1067,16 @@ describe('Make prediction', function () {
             await browser.driver.switchTo().window(master);
             await homePage.clickClosePopUp();
             await commonHelper.waitUntilElementVisible(homePage.successTransactionMsg);
+        });
+
+        ///HISTORY
+
+        it('should switch another tab', async function () {
+            await makePredictionPage.switchOtherTab('My orders history');
+        });
+
+        it('should check status', async function () {
+            await makePredictionPage.getOrderStatus(custom_event_data.startTime, custom_event_data.date, 'Finished');
         });
 
     });
@@ -1959,6 +1978,16 @@ describe('Make prediction', function () {
             await commonHelper.waitUntilElementVisible(homePage.successTransactionMsg);
         });
 
+        ///HISTORY
+
+        it('should switch another tab', async function () {
+            await makePredictionPage.switchOtherTab('My orders history');
+        });
+
+        it('should check status', async function () {
+            await makePredictionPage.getOrderStatus(custom_event_data.startTime, custom_event_data.date, 'Finished');
+        });
+
         it('should open platforms', async function () {
             await platformsPage.clickSwitchPlatform();
             await platformsPage.selectPlatform('POL');
@@ -1998,6 +2027,16 @@ describe('Make prediction', function () {
             await browser.driver.switchTo().window(master);
             await homePage.clickClosePopUp();
             await commonHelper.waitUntilElementVisible(homePage.successTransactionMsg);
+        });
+
+        ///HISTORY
+
+        it('should switch another tab', async function () {
+            await makePredictionPage.switchOtherTab('My orders history');
+        });
+
+        it('should check status', async function () {
+            await makePredictionPage.getOrderStatus(custom_event_data.startTime, custom_event_data.date, 'Finished');
         });
 
     });
@@ -2546,6 +2585,16 @@ describe('Make prediction', function () {
             await browser.driver.switchTo().window(master);
             await homePage.clickClosePopUp();
             await commonHelper.waitUntilElementVisible(homePage.successTransactionMsg);
+        });
+
+        ///HISTORY
+
+        it('should switch another tab', async function () {
+            await makePredictionPage.switchOtherTab('My orders history');
+        });
+
+        it('should check status', async function () {
+            await makePredictionPage.getOrderStatusApi(apiTime, 'Finished');
         });
 
     });
